@@ -61,19 +61,19 @@ def handle_events():
 def draw_girl(x,y):
    
     if key_on == 0:
-        idle_girl.clip_draw(frame * 320, 0, 320, 320, x, y, 100, 100)
+        idle_girl.clip_draw(frame * 320, 0, 320, 320, x, y, 120, 120)
 
     elif key_on == 4:
-        running_girl.clip_draw(frame * 320, 960, 320, 320, x, y, 100, 100)
+        running_girl.clip_draw(frame * 320, 960, 320, 320, x, y, 120, 120)
 
     elif key_on == 1:
-        running_girl.clip_draw(frame * 320, 640, 320, 320, x, y, 100, 100)
+        running_girl.clip_draw(frame * 320, 640, 320, 320, x, y, 120, 120)
 
     elif key_on == 2:
-        running_girl.clip_draw(frame * 320, 320, 320, 320, x, y, 100, 100)
+        running_girl.clip_draw(frame * 320, 320, 320, 320, x, y, 120, 120)
 
     elif key_on == 3:
-        running_girl.clip_draw(frame * 320, 0, 320, 320, x, y, 100, 100)
+        running_girl.clip_draw(frame * 320, 0, 320, 320, x, y, 120, 120)
     
    
 
