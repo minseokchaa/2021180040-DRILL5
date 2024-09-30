@@ -111,4 +111,6 @@ while alive:
 
 
 close_canvas()
+
+#gg
     
