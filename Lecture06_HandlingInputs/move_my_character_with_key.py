@@ -17,21 +17,22 @@ def handle_events():
         if event.type == SDL_QUIT:
             alive = False
         elif event.type == SDL_KEYDOWN:
+            
             if event.key == SDLK_RIGHT:
-                dir_x += 1
-                key_on = 1
+                    dir_x += 1
+                    key_on = 1
 
             elif event.key == SDLK_LEFT:
-                dir_x -= 1
-                key_on = 2
+                    dir_x -= 1
+                    key_on = 2
 
             elif event.key == SDLK_UP:
-                dir_y += 1
-                key_on = 3
+                    dir_y += 1
+                    key_on = 3
 
             elif event.key == SDLK_DOWN:
-                dir_y -= 1
-                key_on = 4
+                    dir_y -= 1
+                    key_on = 4
 
             elif event.key == SDLK_ESCAPE:
                 alive = False
@@ -93,15 +94,17 @@ key_on = 0
 while alive:
     clear_canvas()
     tuk_ground.draw(TUK_WIDTH//2, TUK_HEIGHT//2)
-    
-    #idle_girl.draw(x,y)
-    
     draw_girl(x,y)
     
     update_canvas()
     handle_events()
-    x += dir_x * 12
-    y += dir_y * 12
+
+    if 0 <= x + dir_x * 12 <= TUK_WIDTH:
+        x += dir_x * 12
+        
+    if 0 <= y + dir_y * 12 <= TUK_HEIGHT:    
+        y += dir_y * 12
+    
     frame = (frame + 1)%4
     delay(0.15)
 
