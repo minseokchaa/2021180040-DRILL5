@@ -95,10 +95,10 @@ while alive:
     
     update_canvas()
     handle_events()
-    x += dir_x * 7
-    y += dir_y * 7
+    x += dir_x * 12
+    y += dir_y * 12
     frame = (frame + 1)%4
-    delay(0.1)
+    delay(0.15)
 
 
 
