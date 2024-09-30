@@ -75,7 +75,12 @@ def draw_girl(x,y):
     elif key_on == 3:       #위쪽
         running_girl.clip_draw(frame * 320, 0, 320, 320, x, y, 120, 120)
     
-   
+
+        #running_girl을 running_girl = load_image('running_girl1.png')로 바꾸고
+        
+        #elif key_on == 1:       #오른쪽
+        #running_girl.clip_draw(frame * 320, 640, 320, 320, x, y, 120, 120)으로 바꿔도 됨
+           
 
 alive = True
 x = 800//2
