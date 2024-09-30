@@ -4,7 +4,7 @@ TUK_WIDTH, TUK_HEIGHT = 1280, 1024
 
 open_canvas(TUK_WIDTH, TUK_HEIGHT)
 tuk_ground = load_image('TUK_GROUND.png')
-running_girl = load_image('running_girl.png')
+running_girl = load_image('running_girl2.png')
 idle_girl = load_image('idle_girl.png')
 
 def handle_events():
@@ -60,19 +60,19 @@ def handle_events():
 
 def draw_girl(x,y):
    
-    if key_on == 0:
+    if key_on == 0:         #기본상태
         idle_girl.clip_draw(frame * 320, 0, 320, 320, x, y, 120, 120)
 
-    elif key_on == 4:
+    elif key_on == 4:       #아래로
         running_girl.clip_draw(frame * 320, 960, 320, 320, x, y, 120, 120)
 
-    elif key_on == 1:
-        running_girl.clip_draw(frame * 320, 640, 320, 320, x, y, 120, 120)
+    elif key_on == 1:       #오른쪽
+        running_girl.clip_draw(frame * 320, 650, 300, 300, x, y, 120, 120)
 
-    elif key_on == 2:
+    elif key_on == 2:       #왼쪽
         running_girl.clip_draw(frame * 320, 320, 320, 320, x, y, 120, 120)
 
-    elif key_on == 3:
+    elif key_on == 3:       #위쪽
         running_girl.clip_draw(frame * 320, 0, 320, 320, x, y, 120, 120)
     
    
