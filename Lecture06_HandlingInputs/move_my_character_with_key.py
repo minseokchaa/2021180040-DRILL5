@@ -1,7 +1,9 @@
 from pico2d import*
 
-open_canvas()
-ground = load_image('TUK_GROUND.png')
+TUK_WIDTH, TUK_HEIGHT = 1280, 1024
+
+open_canvas(TUK_WIDTH, TUK_HEIGHT)
+tuk_ground = load_image('TUK_GROUND.png')
 running_girl = load_image('running_girl.png')
 idle_girl = load_image('idle_girl.png')
 
@@ -84,8 +86,8 @@ dir_y = 0
 
 while alive:
     clear_canvas()
-    ground.draw(400,300,800,600)
-    idle_girl.draw(x,y)
+    tuk_ground.draw(TUK_WIDTH//2, TUK_HEIGHT//2)
+    #idle_girl.draw(x,y)
     #draw_girl(x,y)
     update_canvas()
     handle_events()
